@@ -1,0 +1,79 @@
+.app-body{
+    background: url('.//..//405029.jpg');
+    color: antiquewhite;
+    background-size: 100% 100%;
+}
+.container{
+    font-size: 14px; 
+    margin: 0px 110px 0px 100px;
+    padding-bottom: 23px;
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+}
+.gender-inp{
+    font-weight: normal;
+}
+select, input{
+    border: darkgray 2px solid;
+    border-radius: 15px;
+}
+.submit-btn{
+    background-color: darkgrey;
+    color: black;
+    border-radius: 15px;
+}
+.err-alert{
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+  }
+  
+  .alert {
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #45a049;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+  .closeErrbtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closeErrbtn:hover {
+    color: black;
+  }
+  .final-messege-0{
+      color: crimson;
+      font-size: 30px;
+  }
+  .final-messege-1{
+    color: white;
+    font-size: 30px;
+}

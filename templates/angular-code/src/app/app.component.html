@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Hello, world!</title>
+
+</head>
+
+<body class="app-body">
+  <div>
+    <h2>Titanic shipwreck</h2>
+  </div>
+  <div class="container">
+    <div class="alert" *ngIf="predictFlag == true">
+      <span class="closebtn" (click)="close()">&times;</span>
+      <strong class="{{finalMessegeClass}}">{{predictMessege}}</strong>
+    </div>
+  
+    <!-- error alert -->
+    <div class="err-alert" *ngIf="predictErrFlag == true">
+      <span class="closeErrbtn" (click)="closeErr()">&times;</span>
+      <strong>{{predictErrMessege}}</strong>
+    </div>
+  
+    <form [formGroup]="form">
+      <div class="dropdown">
+        <label for="sel1"> Passenger Class</label>
+        <select class="form-control" formControlName="passengerClass" id="passenger_class" name="sellist_passenger_class">
+          <option disabled=true></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+  
+      <br>
+      <label for="sel1">Gender:</label>
+      <div class="form-check-inline" style="margin-left: 20px;">
+        <label class="form-check-label gender-inp">
+          <input type="radio" formControlName="gender" class="form-check-input" value="male">Male
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label gender-inp">
+          <input type="radio" formControlName="gender" class="form-check-input" value="female">Female
+        </label>
+      </div>
+  
+      <br>
+      <div class="form-group">
+        <label for="usr">Age:</label>
+        <input type="text" formControlName="age" class="form-control" id="age">
+      </div>
+  
+      <br>
+      <div class="dropdown">
+        <label for="sel1"> SibSp</label>
+        <select class="form-control" formControlName="sibSp" id="SibSp" name="sellist_SibSp">
+          <option disabled=true></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+  
+      <br>
+      <div class="dropdown">
+        <label for="sel1"> Parch</label>
+        <select class="form-control" id="parch" formControlName="parch" name="sellist_parch">
+          <option disabled=true></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="usr">Fare:</label>
+        <input type="text" formControlName="fare" class="form-control" id="fare">
+      </div>
+      <br>
+      <div class="dropdown">
+        <label for="sel1"> Embarked</label>
+        <select class="form-control" id="parch" formControlName="embarked" name="sellist_embarked">
+          <option disabled=true></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <button type="submit" class="btn btn-primary submit-btn" (click)="predict()">Submit</button>
+      </div>
+  
+    </form>
+  </div>
+</body>
+
+</html>
